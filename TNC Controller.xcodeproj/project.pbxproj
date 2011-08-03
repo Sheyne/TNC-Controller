@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3648C74813EA176800797C3F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3648C74713EA176800797C3F /* Cocoa.framework */; };
+		3648C75213EA176800797C3F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3648C75013EA176800797C3F /* InfoPlist.strings */; };
+		3648C75413EA176800797C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3648C75313EA176800797C3F /* main.m */; };
+		3648C75813EA176800797C3F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3648C75613EA176800797C3F /* Credits.rtf */; };
+		3648C75B13EA176800797C3F /* TNC_ControllerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3648C75A13EA176800797C3F /* TNC_ControllerAppDelegate.m */; };
+		3648C75E13EA176800797C3F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3648C75C13EA176800797C3F /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3648C74313EA176800797C3F /* TNC Controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TNC Controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3648C74713EA176800797C3F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3648C74A13EA176800797C3F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3648C74B13EA176800797C3F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3648C74C13EA176800797C3F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3648C74F13EA176800797C3F /* TNC Controller-Info.plist */ = {isa = PBXFileReference; path = "TNC Controller-Info.plist"; sourceTree = "<group>"; };
+		3648C75113EA176800797C3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3648C75313EA176800797C3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3648C75513EA176800797C3F /* TNC Controller-Prefix.pch */ = {isa = PBXFileReference; path = "TNC Controller-Prefix.pch"; sourceTree = "<group>"; };
+		3648C75713EA176800797C3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		3648C75913EA176800797C3F /* TNC_ControllerAppDelegate.h */ = {isa = PBXFileReference; path = TNC_ControllerAppDelegate.h; sourceTree = "<group>"; };
+		3648C75A13EA176800797C3F /* TNC_ControllerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNC_ControllerAppDelegate.m; sourceTree = "<group>"; };
+		3648C75D13EA176800797C3F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3648C74013EA176800797C3F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3648C74813EA176800797C3F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3648C73813EA176700797C3F = {
+			isa = PBXGroup;
+			children = (
+				3648C74D13EA176800797C3F /* TNC Controller */,
+				3648C74613EA176800797C3F /* Frameworks */,
+				3648C74413EA176800797C3F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3648C74413EA176800797C3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3648C74313EA176800797C3F /* TNC Controller.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3648C74613EA176800797C3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3648C74713EA176800797C3F /* Cocoa.framework */,
+				3648C74913EA176800797C3F /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3648C74913EA176800797C3F /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3648C74A13EA176800797C3F /* AppKit.framework */,
+				3648C74B13EA176800797C3F /* CoreData.framework */,
+				3648C74C13EA176800797C3F /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		3648C74D13EA176800797C3F /* TNC Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3648C75913EA176800797C3F /* TNC_ControllerAppDelegate.h */,
+				3648C75A13EA176800797C3F /* TNC_ControllerAppDelegate.m */,
+				3648C75C13EA176800797C3F /* MainMenu.xib */,
+				3648C74E13EA176800797C3F /* Supporting Files */,
+			);
+			path = "TNC Controller";
+			sourceTree = "<group>";
+		};
+		3648C74E13EA176800797C3F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3648C74F13EA176800797C3F /* TNC Controller-Info.plist */,
+				3648C75013EA176800797C3F /* InfoPlist.strings */,
+				3648C75313EA176800797C3F /* main.m */,
+				3648C75513EA176800797C3F /* TNC Controller-Prefix.pch */,
+				3648C75613EA176800797C3F /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3648C74213EA176800797C3F /* TNC Controller */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3648C76113EA176800797C3F /* Build configuration list for PBXNativeTarget "TNC Controller" */;
+			buildPhases = (
+				3648C73F13EA176800797C3F /* Sources */,
+				3648C74013EA176800797C3F /* Frameworks */,
+				3648C74113EA176800797C3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TNC Controller";
+			productName = "TNC Controller";
+			productReference = 3648C74313EA176800797C3F /* TNC Controller.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3648C73A13EA176700797C3F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Sheyne Anderson";
+			};
+			buildConfigurationList = 3648C73D13EA176700797C3F /* Build configuration list for PBXProject "TNC Controller" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3648C73813EA176700797C3F;
+			productRefGroup = 3648C74413EA176800797C3F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3648C74213EA176800797C3F /* TNC Controller */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3648C74113EA176800797C3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3648C75213EA176800797C3F /* InfoPlist.strings in Resources */,
+				3648C75813EA176800797C3F /* Credits.rtf in Resources */,
+				3648C75E13EA176800797C3F /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3648C73F13EA176800797C3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3648C75413EA176800797C3F /* main.m in Sources */,
+				3648C75B13EA176800797C3F /* TNC_ControllerAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3648C75013EA176800797C3F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3648C75113EA176800797C3F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3648C75613EA176800797C3F /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3648C75713EA176800797C3F /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		3648C75C13EA176800797C3F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3648C75D13EA176800797C3F /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3648C75F13EA176800797C3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3648C76013EA176800797C3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3648C76213EA176800797C3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TNC Controller/TNC Controller-Prefix.pch";
+				INFOPLIST_FILE = "TNC Controller/TNC Controller-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3648C76313EA176800797C3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TNC Controller/TNC Controller-Prefix.pch";
+				INFOPLIST_FILE = "TNC Controller/TNC Controller-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3648C73D13EA176700797C3F /* Build configuration list for PBXProject "TNC Controller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3648C75F13EA176800797C3F /* Debug */,
+				3648C76013EA176800797C3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3648C76113EA176800797C3F /* Build configuration list for PBXNativeTarget "TNC Controller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3648C76213EA176800797C3F /* Debug */,
+				3648C76313EA176800797C3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3648C73A13EA176700797C3F /* Project object */;
+}
