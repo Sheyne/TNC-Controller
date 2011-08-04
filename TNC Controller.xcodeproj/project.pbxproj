@@ -16,6 +16,7 @@
 		3648C76713EA17D800797C3F /* Telescope.m in Sources */ = {isa = PBXBuildFile; fileRef = 3648C76613EA17D800797C3F /* Telescope.m */; };
 		3648C76913EA17F200797C3F /* TelescopeDriver.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3648C76813EA17F200797C3F /* TelescopeDriver.xib */; };
 		3648C76B13EA20A000797C3F /* TCP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3648C76A13EA209F00797C3F /* TCP.framework */; };
+		3648C76D13EA21F600797C3F /* README in Resources */ = {isa = PBXBuildFile; fileRef = 3648C76C13EA21F500797C3F /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3648C76613EA17D800797C3F /* Telescope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Telescope.m; sourceTree = "<group>"; };
 		3648C76813EA17F200797C3F /* TelescopeDriver.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelescopeDriver.xib; sourceTree = "<group>"; };
 		3648C76A13EA209F00797C3F /* TCP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TCP.framework; path = Library/Frameworks/TCP.framework; sourceTree = SDKROOT; };
+		3648C76C13EA21F500797C3F /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		3648C73813EA176700797C3F = {
 			isa = PBXGroup;
 			children = (
+				3648C76C13EA21F500797C3F /* README */,
 				3648C74D13EA176800797C3F /* TNC Controller */,
 				3648C74613EA176800797C3F /* Frameworks */,
 				3648C74413EA176800797C3F /* Products */,
@@ -176,6 +179,7 @@
 				3648C75813EA176800797C3F /* Credits.rtf in Resources */,
 				3648C75E13EA176800797C3F /* MainMenu.xib in Resources */,
 				3648C76913EA17F200797C3F /* TelescopeDriver.xib in Resources */,
+				3648C76D13EA21F600797C3F /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
