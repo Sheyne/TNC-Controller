@@ -13,6 +13,9 @@
 		3648C75813EA176800797C3F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3648C75613EA176800797C3F /* Credits.rtf */; };
 		3648C75B13EA176800797C3F /* TNC_ControllerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3648C75A13EA176800797C3F /* TNC_ControllerAppDelegate.m */; };
 		3648C75E13EA176800797C3F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3648C75C13EA176800797C3F /* MainMenu.xib */; };
+		3648C76713EA17D800797C3F /* Telescope.m in Sources */ = {isa = PBXBuildFile; fileRef = 3648C76613EA17D800797C3F /* Telescope.m */; };
+		3648C76913EA17F200797C3F /* TelescopeDriver.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3648C76813EA17F200797C3F /* TelescopeDriver.xib */; };
+		3648C76B13EA20A000797C3F /* TCP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3648C76A13EA209F00797C3F /* TCP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +24,18 @@
 		3648C74A13EA176800797C3F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		3648C74B13EA176800797C3F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3648C74C13EA176800797C3F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		3648C74F13EA176800797C3F /* TNC Controller-Info.plist */ = {isa = PBXFileReference; path = "TNC Controller-Info.plist"; sourceTree = "<group>"; };
+		3648C74F13EA176800797C3F /* TNC Controller-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TNC Controller-Info.plist"; sourceTree = "<group>"; };
 		3648C75113EA176800797C3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3648C75313EA176800797C3F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3648C75513EA176800797C3F /* TNC Controller-Prefix.pch */ = {isa = PBXFileReference; path = "TNC Controller-Prefix.pch"; sourceTree = "<group>"; };
+		3648C75513EA176800797C3F /* TNC Controller-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TNC Controller-Prefix.pch"; sourceTree = "<group>"; };
 		3648C75713EA176800797C3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		3648C75913EA176800797C3F /* TNC_ControllerAppDelegate.h */ = {isa = PBXFileReference; path = TNC_ControllerAppDelegate.h; sourceTree = "<group>"; };
+		3648C75913EA176800797C3F /* TNC_ControllerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNC_ControllerAppDelegate.h; sourceTree = "<group>"; };
 		3648C75A13EA176800797C3F /* TNC_ControllerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNC_ControllerAppDelegate.m; sourceTree = "<group>"; };
 		3648C75D13EA176800797C3F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3648C76513EA17D800797C3F /* Telescope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Telescope.h; sourceTree = "<group>"; };
+		3648C76613EA17D800797C3F /* Telescope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Telescope.m; sourceTree = "<group>"; };
+		3648C76813EA17F200797C3F /* TelescopeDriver.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelescopeDriver.xib; sourceTree = "<group>"; };
+		3648C76A13EA209F00797C3F /* TCP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TCP.framework; path = Library/Frameworks/TCP.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3648C76B13EA20A000797C3F /* TCP.framework in Frameworks */,
 				3648C74813EA176800797C3F /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +71,7 @@
 		3648C74613EA176800797C3F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3648C76A13EA209F00797C3F /* TCP.framework */,
 				3648C74713EA176800797C3F /* Cocoa.framework */,
 				3648C74913EA176800797C3F /* Other Frameworks */,
 			);
@@ -82,6 +91,7 @@
 		3648C74D13EA176800797C3F /* TNC Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3648C76413EA17B000797C3F /* TelescopeController */,
 				3648C75913EA176800797C3F /* TNC_ControllerAppDelegate.h */,
 				3648C75A13EA176800797C3F /* TNC_ControllerAppDelegate.m */,
 				3648C75C13EA176800797C3F /* MainMenu.xib */,
@@ -100,6 +110,16 @@
 				3648C75613EA176800797C3F /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3648C76413EA17B000797C3F /* TelescopeController */ = {
+			isa = PBXGroup;
+			children = (
+				3648C76513EA17D800797C3F /* Telescope.h */,
+				3648C76613EA17D800797C3F /* Telescope.m */,
+				3648C76813EA17F200797C3F /* TelescopeDriver.xib */,
+			);
+			name = TelescopeController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +175,7 @@
 				3648C75213EA176800797C3F /* InfoPlist.strings in Resources */,
 				3648C75813EA176800797C3F /* Credits.rtf in Resources */,
 				3648C75E13EA176800797C3F /* MainMenu.xib in Resources */,
+				3648C76913EA17F200797C3F /* TelescopeDriver.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +188,7 @@
 			files = (
 				3648C75413EA176800797C3F /* main.m in Sources */,
 				3648C75B13EA176800797C3F /* TNC_ControllerAppDelegate.m in Sources */,
+				3648C76713EA17D800797C3F /* Telescope.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

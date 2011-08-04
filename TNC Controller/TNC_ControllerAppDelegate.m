@@ -7,6 +7,8 @@
 //
 
 #import "TNC_ControllerAppDelegate.h"
+#import "Telescope.h"
+
 
 @implementation TNC_ControllerAppDelegate
 
@@ -14,7 +16,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-	// Insert code here to initialize your application
+	Telescope *t=[[Telescope alloc] init];
 }
 
 @end
