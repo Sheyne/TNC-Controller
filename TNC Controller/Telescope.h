@@ -9,6 +9,8 @@
 #import <Cocoa/Cocoa.h>
 #import <TCP/TCP.h>
 
+@class SphericalPoint;
+
 @interface Telescope : NSObject <TCPListener>
 {
 	int nButtonState, sButtonState, eButtonState, wButtonState;
@@ -16,6 +18,7 @@
 	NSString *targetAltitude,*targetAzimuth;
 	TCP *_tcpConnection;
 	NSWindow *connectionWindow, *window;
+	SphericalPoint *_d710point;
 	
 }
 @property (retain) TCP *con;
@@ -23,6 +26,7 @@
 @property (retain) NSString *log, *auxString, *addressString;
 @property (assign) int nButtonState, sButtonState, eButtonState, wButtonState;
 @property (assign) IBOutlet NSWindow *connectionWindow, *window;
+@property (retain) SphericalPoint *d710point;
 
 -(void)makeFocus;
 

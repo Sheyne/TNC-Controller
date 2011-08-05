@@ -7,10 +7,13 @@
 //
 
 #import "Telescope.h"
+#import "SphericalPoint.h"
 
 static void* DirectionChangedContext=(void *)@"TelescopeControllerDirectionChangedContext";
 
 @implementation Telescope
+
+@synthesize d710point=_d710point;
 
 @synthesize targetAltitude,targetAzimuth;
 @synthesize nButtonState, sButtonState, eButtonState, wButtonState;
@@ -162,11 +165,12 @@ static void* DirectionChangedContext=(void *)@"TelescopeControllerDirectionChang
 }
 
 -(void)receivedPacketFromCallsign:(NSString *)callsign withBody:(NSDictionary *)dict{
-	[self.selfPoint findTarget:targetPoint];
+	SphericalPoint *targetPoint;
+	[self.d710point findTarget:targetPoint];
 	double distto, angto, heading;
-	distto=self.selfPoint.distanceBetweenSelfAndTarget;
-	angto=self.selfPoint.angleFromLevelToTarget*180/M_PI;
-	heading=self.selfPoint.headingFromSelfToTarget*180/M_PI;
+	distto=self.d710point.distanceBetweenSelfAndTarget;
+	angto=self.d710point.angleFromLevelToTarget*180/M_PI;
+	heading=self.d710point.headingFromSelfToTarget*180/M_PI;
 	NSMutableDictionary *obj=[NSMutableDictionary dictionaryWithCapacity:3];
 	NSNumber * num;
 	if (!isnan(distto)) {

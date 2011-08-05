@@ -19,6 +19,7 @@
 		3648C76D13EA21F600797C3F /* README in Resources */ = {isa = PBXBuildFile; fileRef = 3648C76C13EA21F500797C3F /* README */; };
 		36F931F413EC65D800C7FBC3 /* GeoMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F931F113EC65D800C7FBC3 /* GeoMath.m */; };
 		36F931F513EC65D800C7FBC3 /* SphericalPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F931F313EC65D800C7FBC3 /* SphericalPoint.m */; };
+		36F931FC13EC679C00C7FBC3 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F931FB13EC679C00C7FBC3 /* JSONKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		36F931F113EC65D800C7FBC3 /* GeoMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoMath.m; sourceTree = "<group>"; };
 		36F931F213EC65D800C7FBC3 /* SphericalPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SphericalPoint.h; sourceTree = "<group>"; };
 		36F931F313EC65D800C7FBC3 /* SphericalPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SphericalPoint.m; sourceTree = "<group>"; };
+		36F931FA13EC679C00C7FBC3 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		36F931FB13EC679C00C7FBC3 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,7 @@
 		3648C74D13EA176800797C3F /* TNC Controller */ = {
 			isa = PBXGroup;
 			children = (
+				36F931F613EC673700C7FBC3 /* JSON */,
 				36F931EE13EC658E00C7FBC3 /* Math */,
 				36F931F013EC65D800C7FBC3 /* GeoMath.h */,
 				36F931F113EC65D800C7FBC3 /* GeoMath.m */,
@@ -141,6 +145,15 @@
 			children = (
 			);
 			name = Math;
+			sourceTree = "<group>";
+		};
+		36F931F613EC673700C7FBC3 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				36F931FA13EC679C00C7FBC3 /* JSONKit.h */,
+				36F931FB13EC679C00C7FBC3 /* JSONKit.m */,
+			);
+			name = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +226,7 @@
 				3648C76713EA17D800797C3F /* Telescope.m in Sources */,
 				36F931F413EC65D800C7FBC3 /* GeoMath.m in Sources */,
 				36F931F513EC65D800C7FBC3 /* SphericalPoint.m in Sources */,
+				36F931FC13EC679C00C7FBC3 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
