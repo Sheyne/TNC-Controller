@@ -63,7 +63,6 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{33, 206}, {24, 25}}</string>
 							<reference key="NSSuperview" ref="222320397"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="1007585641"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="374228903">
@@ -89,7 +88,6 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{5, 181}, {24, 25}}</string>
 							<reference key="NSSuperview" ref="222320397"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="719870841"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="714912078">
@@ -111,7 +109,6 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{33, 181}, {24, 25}}</string>
 							<reference key="NSSuperview" ref="222320397"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="633933454"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="404457507">
@@ -133,7 +130,6 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{33, 156}, {24, 25}}</string>
 							<reference key="NSSuperview" ref="222320397"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="788282148"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="469703385">
@@ -155,7 +151,6 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{61, 181}, {25, 25}}</string>
 							<reference key="NSSuperview" ref="222320397"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="563768140"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="884202587">
@@ -177,7 +172,6 @@
 							<int key="NSvFlags">265</int>
 							<string key="NSFrame">{{255, 157}, {46, 25}}</string>
 							<reference key="NSSuperview" ref="222320397"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="610910399"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="932534811">
@@ -199,7 +193,6 @@
 							<int key="NSvFlags">266</int>
 							<string key="NSFrame">{{90, 159}, {162, 22}}</string>
 							<reference key="NSSuperview" ref="222320397"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="1002632750"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="233981844">
@@ -234,7 +227,6 @@
 							<int key="NSvFlags">266</int>
 							<string key="NSFrame">{{147, 183}, {105, 22}}</string>
 							<reference key="NSSuperview" ref="222320397"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="577398162"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="144253663">
@@ -254,7 +246,6 @@
 							<int key="NSvFlags">266</int>
 							<string key="NSFrame">{{147, 208}, {105, 22}}</string>
 							<reference key="NSSuperview" ref="222320397"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="750078849"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="250272131">
@@ -274,7 +265,6 @@
 							<int key="NSvFlags">274</int>
 							<string key="NSFrame">{{5, 7}, {296, 147}}</string>
 							<reference key="NSSuperview" ref="222320397"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="475568580">
@@ -293,7 +283,6 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{87, 211}, {58, 17}}</string>
 							<reference key="NSSuperview" ref="222320397"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="10086101"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="910227523">
@@ -324,7 +313,6 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{87, 186}, {62, 17}}</string>
 							<reference key="NSSuperview" ref="222320397"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="405974102"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="167823662">
@@ -342,7 +330,6 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{255, 183}, {46, 47}}</string>
 							<reference key="NSSuperview" ref="222320397"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="834400325"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="604145112">
@@ -364,7 +351,6 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{235, 212}, {14, 14}}</string>
 							<reference key="NSSuperview" ref="222320397"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="878428378"/>
 							<int key="NSTag">4</int>
 							<bool key="NSEnabled">YES</bool>
@@ -387,7 +373,6 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{235, 187}, {14, 14}}</string>
 							<reference key="NSSuperview" ref="222320397"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="150901956"/>
 							<int key="NSTag">5</int>
 							<bool key="NSEnabled">YES</bool>
@@ -408,7 +393,6 @@
 					</object>
 					<string key="NSFrameSize">{307, 230}</string>
 					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="1053946056"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
@@ -419,7 +403,7 @@
 			<object class="NSWindowTemplate" id="400041324">
 				<int key="NSWindowStyleMask">271</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{157, 401}, {145, 60}}</string>
+				<string key="NSWindowRect">{{157, 401}, {145, 59}}</string>
 				<int key="NSWTFlags">1685585920</int>
 				<string key="NSWindowTitle">Tele</string>
 				<string key="NSWindowClass">NSWindow</string>
@@ -435,8 +419,6 @@
 							<int key="NSvFlags">265</int>
 							<string key="NSFrame">{{5, 5}, {135, 25}}</string>
 							<reference key="NSSuperview" ref="802440081"/>
-							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="117751163">
 								<int key="NSCellFlags">67239424</int>
@@ -457,7 +439,6 @@
 							<int key="NSvFlags">266</int>
 							<string key="NSFrame">{{5, 37}, {135, 22}}</string>
 							<reference key="NSSuperview" ref="802440081"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="341401200"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="552011514">
@@ -473,9 +454,8 @@
 							</object>
 						</object>
 					</object>
-					<string key="NSFrameSize">{145, 60}</string>
+					<string key="NSFrameSize">{145, 59}</string>
 					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="707705892"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
@@ -489,38 +469,6 @@
 		<object class="IBObjectContainer" key="IBDocument.Objects">
 			<object class="NSMutableArray" key="connectionRecords">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: self.targetAltitude</string>
-						<reference key="source" ref="10086101"/>
-						<reference key="destination" ref="1001"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="10086101"/>
-							<reference key="NSDestination" ref="1001"/>
-							<string key="NSLabel">value: self.targetAltitude</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">self.targetAltitude</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">67</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: self.targetAzimuth</string>
-						<reference key="source" ref="405974102"/>
-						<reference key="destination" ref="1001"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="405974102"/>
-							<reference key="NSDestination" ref="1001"/>
-							<string key="NSLabel">value: self.targetAzimuth</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">self.targetAzimuth</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">71</int>
-				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
 						<string key="label">setAlt_Az:</string>
@@ -552,38 +500,6 @@
 						<reference key="destination" ref="1002632750"/>
 					</object>
 					<int key="connectionID">75</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: self.auxString</string>
-						<reference key="source" ref="788282148"/>
-						<reference key="destination" ref="1001"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="788282148"/>
-							<reference key="NSDestination" ref="1001"/>
-							<string key="NSLabel">value: self.auxString</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">self.auxString</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">78</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: self.log</string>
-						<reference key="source" ref="610910399"/>
-						<reference key="destination" ref="1001"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="610910399"/>
-							<reference key="NSDestination" ref="1001"/>
-							<string key="NSLabel">value: self.log</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">self.log</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">80</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -656,6 +572,130 @@
 						<reference key="destination" ref="719870841"/>
 					</object>
 					<int key="connectionID">92</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">connectToTelescope:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="341401200"/>
+					</object>
+					<int key="connectionID">102</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: self.addressString</string>
+						<reference key="source" ref="707705892"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="707705892"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">value: self.addressString</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">self.addressString</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSContinuouslyUpdatesValue</string>
+								<boolean value="YES" key="NS.object.0"/>
+							</object>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">106</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">window</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="881061676"/>
+					</object>
+					<int key="connectionID">107</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">connectionWindow</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="400041324"/>
+					</object>
+					<int key="connectionID">108</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: self.targetAltitude</string>
+						<reference key="source" ref="10086101"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="10086101"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">value: self.targetAltitude</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">self.targetAltitude</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSContinuouslyUpdatesValue</string>
+								<boolean value="YES" key="NS.object.0"/>
+							</object>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">109</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: self.targetAzimuth</string>
+						<reference key="source" ref="405974102"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="405974102"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">value: self.targetAzimuth</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">self.targetAzimuth</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSContinuouslyUpdatesValue</string>
+								<boolean value="YES" key="NS.object.0"/>
+							</object>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">110</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: self.auxString</string>
+						<reference key="source" ref="788282148"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="788282148"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">value: self.auxString</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">self.auxString</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSContinuouslyUpdatesValue</string>
+								<boolean value="YES" key="NS.object.0"/>
+							</object>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">111</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: self.log</string>
+						<reference key="source" ref="610910399"/>
+						<reference key="destination" ref="1001"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="610910399"/>
+							<reference key="NSDestination" ref="1001"/>
+							<string key="NSLabel">value: self.log</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">self.log</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSContinuouslyUpdatesValue</string>
+								<boolean value="YES" key="NS.object.0"/>
+							</object>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">112</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1059,7 +1099,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{455, 471}, {307, 230}}</string>
-					<integer value="1"/>
+					<boolean value="NO"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1074,7 +1114,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{404, 467}, {145, 60}}</string>
-					<boolean value="YES"/>
+					<boolean value="NO"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1094,74 +1134,9 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">98</int>
+			<int key="maxID">112</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="IBPartialClassDescription">
-					<string key="className">Telescope</string>
-					<string key="superclassName">NSObject</string>
-					<object class="NSMutableDictionary" key="actions">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>goToTargetA:</string>
-							<string>pressAuxButton:</string>
-							<string>setAltAzAndGo:</string>
-							<string>setAlt_Az:</string>
-							<string>stop:</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>NSButton</string>
-							<string>NSButton</string>
-							<string>id</string>
-							<string>NSButton</string>
-							<string>NSButton</string>
-						</object>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>goToTargetA:</string>
-							<string>pressAuxButton:</string>
-							<string>setAltAzAndGo:</string>
-							<string>setAlt_Az:</string>
-							<string>stop:</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBActionInfo">
-								<string key="name">goToTargetA:</string>
-								<string key="candidateClassName">NSButton</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">pressAuxButton:</string>
-								<string key="candidateClassName">NSButton</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">setAltAzAndGo:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">setAlt_Az:</string>
-								<string key="candidateClassName">NSButton</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">stop:</string>
-								<string key="candidateClassName">NSButton</string>
-							</object>
-						</object>
-					</object>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/Telescope.h</string>
-					</object>
-				</object>
-			</object>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">

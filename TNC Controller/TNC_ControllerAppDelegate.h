@@ -7,11 +7,24 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <TCP/TCP.h>
 
-@interface TNC_ControllerAppDelegate : NSObject <NSApplicationDelegate> {
+@class Telescope;
+
+@interface TNC_ControllerAppDelegate : NSObject <NSApplicationDelegate, TCPListener> {
 	NSWindow *window;
+	TCP *tcp;
+	NSString *_address,*_callsigns;
+	NSMutableArray *_telescopes;
 }
 
 @property (assign) IBOutlet NSWindow *window;
+@property (retain) NSString *address, *callsigns;;
+@property (retain)NSMutableArray *telescopes;
+
+-(IBAction)showTelescopeWindow:(id)sender;
+
+-(IBAction)connectToServer:(id)sender;
+-(void)receivedPacketFromCallsign:(NSString *)callsign withBody:(NSDictionary *)dict;
 
 @end

@@ -12,17 +12,19 @@
 @interface Telescope : NSObject <TCPListener>
 {
 	int nButtonState, sButtonState, eButtonState, wButtonState;
-	NSString *auxString,*log, *addressString, *TNCaddressSting;
+	NSString *auxString,*log, *addressString;
 	NSString *targetAltitude,*targetAzimuth;
 	TCP *_tcpConnection;
+	NSWindow *connectionWindow, *window;
 	
 }
 @property (retain) TCP *con;
-@property (assign) IBOutlet NSWindow *connectionWindow;
 @property (retain) NSString *targetAltitude, *targetAzimuth;
-@property (retain) NSString *log, *auxString, *addressString, *TNCaddressString;
+@property (retain) NSString *log, *auxString, *addressString;
 @property (assign) int nButtonState, sButtonState, eButtonState, wButtonState;
+@property (assign) IBOutlet NSWindow *connectionWindow, *window;
 
+-(void)makeFocus;
 
 -(IBAction)stop:(NSButton*)sender;
 -(IBAction)pressAuxButton:(NSButton*)sender;
@@ -37,5 +39,9 @@
 -(void)setButton:(NSString*)button toState:(int)state;
 
 -(void)doSend:(NSString*)command;
+
+-(IBAction)connectToTelescope:(NSButton *)sender;
+
+-(void)receivedPacketFromCallsign:(NSString *)callsign withBody:(NSDictionary *)dict;
 
 @end

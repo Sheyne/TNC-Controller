@@ -14,9 +14,9 @@ static void* DirectionChangedContext=(void *)@"TelescopeControllerDirectionChang
 
 @synthesize targetAltitude,targetAzimuth;
 @synthesize nButtonState, sButtonState, eButtonState, wButtonState;
-@synthesize log, auxString, addressString, TNCaddressString;
+@synthesize log, auxString, addressString;
 
-@synthesize connectionWindow;
+@synthesize connectionWindow, window;
 @synthesize con=_tcpConnection;
 
 
@@ -25,13 +25,11 @@ static void* DirectionChangedContext=(void *)@"TelescopeControllerDirectionChang
 		[NSBundle loadNibNamed:@"TelescopeDriver" owner:self];
 		self.con=[[[TCP alloc]init] autorelease];
 		self.con.delegate=self;
-		[self.connectionWindow orderFront:nil];
 		self.addressString=@"harbor-mbp.local:7342";
 		[self addObserver:self forKeyPath:@"nButtonState" options:NSKeyValueObservingOptionNew context:&DirectionChangedContext];
 		[self addObserver:self forKeyPath:@"sButtonState" options:NSKeyValueObservingOptionNew context:&DirectionChangedContext];
 		[self addObserver:self forKeyPath:@"eButtonState" options:NSKeyValueObservingOptionNew context:&DirectionChangedContext];
 		[self addObserver:self forKeyPath:@"wButtonState" options:NSKeyValueObservingOptionNew context:&DirectionChangedContext];
-
 	}
 	return self;
 }
@@ -39,6 +37,10 @@ static void* DirectionChangedContext=(void *)@"TelescopeControllerDirectionChang
 -(IBAction)pressAuxButton:(NSButton*)button{
 	[self doSend:self.auxString];
 	self.auxString=@"";
+}
+
+-(void)makeFocus{
+	[self.connectionWindow makeKeyAndOrderFront:nil];
 }
 
 -(void)computeAndSendTarget:(char)alt_az angle:(double)angle{
@@ -109,8 +111,8 @@ static void* DirectionChangedContext=(void *)@"TelescopeControllerDirectionChang
 	[self doState:NSOffState on:directions];
 }
 -(void)doSend:(NSString *)command{
-	//[self.con send:[[NSString stringWithFormat:@"#:%@#",command] dataUsingEncoding:NSASCIIStringEncoding]];
-	NSLog(@"%@",command);
+	[self.con send:[[NSString stringWithFormat:@"#:%@#",command] dataUsingEncoding:NSASCIIStringEncoding]];
+	NSLog(@"sending #:%@#",command);
 }
 
 -(void)doState:(int)state on:(NSString*)directions{
@@ -150,6 +152,35 @@ static void* DirectionChangedContext=(void *)@"TelescopeControllerDirectionChang
 	[self doSend:@"MA"];
 }
 
+-(IBAction)connectToTelescope:(NSButton *)sender{
+	NSArray *parts=[self.addressString componentsSeparatedByString:@":"];
+	if (parts.count==2) {
+		[self.con connectToServer:[parts objectAtIndex:0] onPort:[[parts objectAtIndex:1] intValue]];	
+		[self.window makeKeyAndOrderFront:nil];
+		[self.connectionWindow close];
+	}
+}
 
+-(void)receivedPacketFromCallsign:(NSString *)callsign withBody:(NSDictionary *)dict{
+	[self.selfPoint findTarget:targetPoint];
+	double distto, angto, heading;
+	distto=self.selfPoint.distanceBetweenSelfAndTarget;
+	angto=self.selfPoint.angleFromLevelToTarget*180/M_PI;
+	heading=self.selfPoint.headingFromSelfToTarget*180/M_PI;
+	NSMutableDictionary *obj=[NSMutableDictionary dictionaryWithCapacity:3];
+	NSNumber * num;
+	if (!isnan(distto)) {
+		num=[NSNumber numberWithDouble:distto];
+		[obj setObject:num forKey:@"distance"];
+	}
+	if (!isnan(angto)) {
+		num=[NSNumber numberWithDouble:angto];
+		[obj setObject:num forKey:@"altitude angle"];
+	}
+	if (!isnan(heading)){
+		num=[NSNumber numberWithDouble:heading];
+		[obj setObject:num forKey:@"azimuth"];
+	}
 
+}
 @end

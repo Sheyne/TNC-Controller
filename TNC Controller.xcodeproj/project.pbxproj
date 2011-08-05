@@ -94,6 +94,7 @@
 		3648C74D13EA176800797C3F /* TNC Controller */ = {
 			isa = PBXGroup;
 			children = (
+				36F931EE13EC658E00C7FBC3 /* Math */,
 				3648C76413EA17B000797C3F /* TelescopeController */,
 				3648C75913EA176800797C3F /* TNC_ControllerAppDelegate.h */,
 				3648C75A13EA176800797C3F /* TNC_ControllerAppDelegate.m */,
@@ -123,6 +124,13 @@
 				3648C76813EA17F200797C3F /* TelescopeDriver.xib */,
 			);
 			name = TelescopeController;
+			sourceTree = "<group>";
+		};
+		36F931EE13EC658E00C7FBC3 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Math;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +320,7 @@
 				3648C76313EA176800797C3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
