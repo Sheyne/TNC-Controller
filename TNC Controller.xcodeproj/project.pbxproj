@@ -17,6 +17,8 @@
 		3648C76913EA17F200797C3F /* TelescopeDriver.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3648C76813EA17F200797C3F /* TelescopeDriver.xib */; };
 		3648C76B13EA20A000797C3F /* TCP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3648C76A13EA209F00797C3F /* TCP.framework */; };
 		3648C76D13EA21F600797C3F /* README in Resources */ = {isa = PBXBuildFile; fileRef = 3648C76C13EA21F500797C3F /* README */; };
+		36F931F413EC65D800C7FBC3 /* GeoMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F931F113EC65D800C7FBC3 /* GeoMath.m */; };
+		36F931F513EC65D800C7FBC3 /* SphericalPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F931F313EC65D800C7FBC3 /* SphericalPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		3648C76813EA17F200797C3F /* TelescopeDriver.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelescopeDriver.xib; sourceTree = "<group>"; };
 		3648C76A13EA209F00797C3F /* TCP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TCP.framework; path = Library/Frameworks/TCP.framework; sourceTree = SDKROOT; };
 		3648C76C13EA21F500797C3F /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		36F931F013EC65D800C7FBC3 /* GeoMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoMath.h; sourceTree = "<group>"; };
+		36F931F113EC65D800C7FBC3 /* GeoMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoMath.m; sourceTree = "<group>"; };
+		36F931F213EC65D800C7FBC3 /* SphericalPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SphericalPoint.h; sourceTree = "<group>"; };
+		36F931F313EC65D800C7FBC3 /* SphericalPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SphericalPoint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,10 @@
 			isa = PBXGroup;
 			children = (
 				36F931EE13EC658E00C7FBC3 /* Math */,
+				36F931F013EC65D800C7FBC3 /* GeoMath.h */,
+				36F931F113EC65D800C7FBC3 /* GeoMath.m */,
+				36F931F213EC65D800C7FBC3 /* SphericalPoint.h */,
+				36F931F313EC65D800C7FBC3 /* SphericalPoint.m */,
 				3648C76413EA17B000797C3F /* TelescopeController */,
 				3648C75913EA176800797C3F /* TNC_ControllerAppDelegate.h */,
 				3648C75A13EA176800797C3F /* TNC_ControllerAppDelegate.m */,
@@ -201,6 +211,8 @@
 				3648C75413EA176800797C3F /* main.m in Sources */,
 				3648C75B13EA176800797C3F /* TNC_ControllerAppDelegate.m in Sources */,
 				3648C76713EA17D800797C3F /* Telescope.m in Sources */,
+				36F931F413EC65D800C7FBC3 /* GeoMath.m in Sources */,
+				36F931F513EC65D800C7FBC3 /* SphericalPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
