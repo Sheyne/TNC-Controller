@@ -8,10 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 #import <TCP/TCP.h>
+#import "TNC Listener.h"
 
 @class SphericalPoint;
 
-@interface Telescope : NSObject <TCPListener>
+@interface Telescope : NSObject <TCPListener, TNC_Listener>
 {
 	int nButtonState, sButtonState, eButtonState, wButtonState;
 	NSString *auxString,*log, *addressString;
@@ -45,7 +46,5 @@
 -(void)doSend:(NSString*)command;
 
 -(IBAction)connectToTelescope:(NSButton *)sender;
-
--(void)receivedPacketFromCallsign:(NSString *)callsign withBody:(NSDictionary *)dict;
 
 @end

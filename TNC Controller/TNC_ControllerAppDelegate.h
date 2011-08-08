@@ -26,5 +26,6 @@
 
 -(IBAction)connectToServer:(id)sender;
 -(void)receivedPacketFromCallsign:(NSString *)callsign withBody:(NSDictionary *)dict;
+-(void)receivedSelfPosition:(NSDictionary *)dict;
 
 @end

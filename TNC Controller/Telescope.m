@@ -23,6 +23,7 @@ static void* DirectionChangedContext=(void *)@"TelescopeControllerDirectionChang
 @synthesize con=_tcpConnection;
 
 
+
 -(id)init{
 	if (self=[super init]) {
 		[NSBundle loadNibNamed:@"TelescopeDriver" owner:self];
@@ -115,7 +116,7 @@ static void* DirectionChangedContext=(void *)@"TelescopeControllerDirectionChang
 }
 -(void)doSend:(NSString *)command{
 	[self.con send:[[NSString stringWithFormat:@"#:%@#",command] dataUsingEncoding:NSASCIIStringEncoding]];
-	NSLog(@"sending #:%@#",command);
+	NSLog(@"sending #:%@# con: %d",command,self.con.connected);
 }
 
 -(void)doState:(int)state on:(NSString*)directions{
@@ -158,33 +159,44 @@ static void* DirectionChangedContext=(void *)@"TelescopeControllerDirectionChang
 -(IBAction)connectToTelescope:(NSButton *)sender{
 	NSArray *parts=[self.addressString componentsSeparatedByString:@":"];
 	if (parts.count==2) {
+		NSLog(@"connecting to %@ on %d",[parts objectAtIndex:0], [[parts objectAtIndex:1] intValue]);
 		[self.con connectToServer:[parts objectAtIndex:0] onPort:[[parts objectAtIndex:1] intValue]];	
 		[self.window makeKeyAndOrderFront:nil];
 		[self.connectionWindow close];
 	}
 }
 
--(void)receivedPacketFromCallsign:(NSString *)callsign withBody:(NSDictionary *)dict{
-	SphericalPoint *targetPoint;
-	[self.d710point findTarget:targetPoint];
-	double distto, angto, heading;
-	distto=self.d710point.distanceBetweenSelfAndTarget;
-	angto=self.d710point.angleFromLevelToTarget*180/M_PI;
-	heading=self.d710point.headingFromSelfToTarget*180/M_PI;
-	NSMutableDictionary *obj=[NSMutableDictionary dictionaryWithCapacity:3];
-	NSNumber * num;
-	if (!isnan(distto)) {
-		num=[NSNumber numberWithDouble:distto];
-		[obj setObject:num forKey:@"distance"];
+SphericalPoint *pointForPacket(id packet);
+SphericalPoint *pointForPacket(id packet){
+	@try {
+		return [[[SphericalPoint alloc] initWithPhi:[[packet objectForKey:@"latitude"] doubleValue] theta:[[packet objectForKey:@"longitude"] doubleValue] rho:[[packet objectForKey:@"altitude"] doubleValue]] autorelease];
 	}
-	if (!isnan(angto)) {
-		num=[NSNumber numberWithDouble:angto];
-		[obj setObject:num forKey:@"altitude angle"];
+	@catch (NSException *exception) {
+		NSLog(@"Missing Lat/lon/alt");
+		return nil;
 	}
-	if (!isnan(heading)){
-		num=[NSNumber numberWithDouble:heading];
-		[obj setObject:num forKey:@"azimuth"];
-	}
+}
 
+-(void)receivedSelfPosition:(NSDictionary *)dict{
+	NSLog(@"got self packet: %@",dict);
+	self.d710point=pointForPacket(dict);
+}
+
+-(void)receivedPacketFromCallsign:(NSString *)callsign withBody:(NSDictionary *)dict{
+	NSLog(@"got from %@ packet: %@",callsign,dict);
+	SphericalPoint *targetPoint=pointForPacket(dict);
+	if (targetPoint) {
+		[self.d710point findTarget:targetPoint];
+		double distto, angto, heading;
+		distto=self.d710point.distanceBetweenSelfAndTarget;
+		angto=self.d710point.angleFromLevelToTarget*180/M_PI;
+		heading=self.d710point.headingFromSelfToTarget*180/M_PI;
+		if (!isnan(distto)&&!isnan(angto)&&!isnan(heading)) {
+			self.targetAltitude=[NSString stringWithFormat:@"%f", angto];
+			self.targetAzimuth=[NSString stringWithFormat:@"%f", heading];
+			[self setAltAzAndGo:nil];
+		}
+	}
+	
 }
 @end

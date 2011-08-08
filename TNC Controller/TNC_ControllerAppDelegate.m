@@ -10,6 +10,7 @@
 #import "Telescope.h"
 #import <TCP/TCP.h>
 #import "JSONKit.h"
+#import "TNC Listener.h"
 
 @implementation TNC_ControllerAppDelegate
 
@@ -30,16 +31,24 @@
 	NSDictionary * dict=[message objectFromJSONData];
 	NSArray *calls=[self.callsigns componentsSeparatedByString:@","];
 	[dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-		[calls enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-			if ([key hasPrefix:obj]) {
-				[self receivedPacketFromCallsign:key withBody:obj];
-			}
-		}];
+		if ([key isEqualToString:@"D710"])
+			[self receivedSelfPosition:obj];
+		else
+			[calls enumerateObjectsUsingBlock:^(id posibleGoodKey, NSUInteger idx, BOOL *stop) {
+				if ([key hasPrefix:posibleGoodKey]) {
+					[self receivedPacketFromCallsign:key withBody:obj];
+				}
+			}];
 	}];
 }
+-(void)receivedSelfPosition:(NSDictionary *)dict{
+	for (id<TNC_Listener> aDevice in self.telescopes){
+		[aDevice receivedSelfPosition:dict];
+	}	
+}
 -(void)receivedPacketFromCallsign:(NSString *)callsign withBody:(NSDictionary *)dict{
-	for (Telescope *telescope in self.telescopes){
-		[telescope receivedPacketFromCallsign:callsign withBody:dict];
+	for (id<TNC_Listener> aDevice in self.telescopes){
+		[aDevice receivedPacketFromCallsign:callsign withBody:dict];
 	}
 }
 
@@ -47,6 +56,11 @@
 	Telescope *telescope=[[[Telescope alloc] init] autorelease];
 	[self.telescopes addObject:telescope];
 	[telescope makeFocus];
+}
+-(IBAction)showBearingRangeWindow:(id)sender{
+	/*BearingRange *telescope=[[[BearingRange alloc] init] autorelease];
+	[self.telescopes addObject:telescope];
+	[telescope makeFocus];*/
 }
 
 -(IBAction)connectToServer:(id)sender{

@@ -41,6 +41,7 @@
 		3648C76813EA17F200797C3F /* TelescopeDriver.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelescopeDriver.xib; sourceTree = "<group>"; };
 		3648C76A13EA209F00797C3F /* TCP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TCP.framework; path = Library/Frameworks/TCP.framework; sourceTree = SDKROOT; };
 		3648C76C13EA21F500797C3F /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		366486F513EEE62900421348 /* TNC Listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TNC Listener.h"; sourceTree = "<group>"; };
 		36F931F013EC65D800C7FBC3 /* GeoMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoMath.h; sourceTree = "<group>"; };
 		36F931F113EC65D800C7FBC3 /* GeoMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoMath.m; sourceTree = "<group>"; };
 		36F931F213EC65D800C7FBC3 /* SphericalPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SphericalPoint.h; sourceTree = "<group>"; };
@@ -105,15 +106,12 @@
 			children = (
 				36F931F613EC673700C7FBC3 /* JSON */,
 				36F931EE13EC658E00C7FBC3 /* Math */,
-				36F931F013EC65D800C7FBC3 /* GeoMath.h */,
-				36F931F113EC65D800C7FBC3 /* GeoMath.m */,
-				36F931F213EC65D800C7FBC3 /* SphericalPoint.h */,
-				36F931F313EC65D800C7FBC3 /* SphericalPoint.m */,
 				3648C76413EA17B000797C3F /* TelescopeController */,
 				3648C75913EA176800797C3F /* TNC_ControllerAppDelegate.h */,
 				3648C75A13EA176800797C3F /* TNC_ControllerAppDelegate.m */,
 				3648C75C13EA176800797C3F /* MainMenu.xib */,
 				3648C74E13EA176800797C3F /* Supporting Files */,
+				366486F513EEE62900421348 /* TNC Listener.h */,
 			);
 			path = "TNC Controller";
 			sourceTree = "<group>";
@@ -143,6 +141,10 @@
 		36F931EE13EC658E00C7FBC3 /* Math */ = {
 			isa = PBXGroup;
 			children = (
+				36F931F013EC65D800C7FBC3 /* GeoMath.h */,
+				36F931F113EC65D800C7FBC3 /* GeoMath.m */,
+				36F931F213EC65D800C7FBC3 /* SphericalPoint.h */,
+				36F931F313EC65D800C7FBC3 /* SphericalPoint.m */,
 			);
 			name = Math;
 			sourceTree = "<group>";
