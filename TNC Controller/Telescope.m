@@ -10,10 +10,19 @@
 #import "SphericalPoint.h"
 
 static void* DirectionChangedContext=(void *)@"TelescopeControllerDirectionChangedContext";
+static void* PointChangedContext=(void *)@"TelescopeControllerDirectionChangedContext";
+
+@interface Telescope ()
+
+-(void)doState:(int)state on:(NSString*)directions;
+-(void)setButton:(NSString*)button toState:(int)state;
+
+@end
 
 @implementation Telescope
 
 @synthesize d710point=_d710point;
+@synthesize targetPoint=_targetPoint;
 
 @synthesize targetAltitude,targetAzimuth;
 @synthesize nButtonState, sButtonState, eButtonState, wButtonState;
@@ -27,13 +36,14 @@ static void* DirectionChangedContext=(void *)@"TelescopeControllerDirectionChang
 -(id)init{
 	if (self=[super init]) {
 		[NSBundle loadNibNamed:@"TelescopeDriver" owner:self];
-		self.con=[[[TCP alloc]init] autorelease];
-		self.con.delegate=self;
+		self.con=[[[AsyncSocket alloc] initWithDelegate:self] autorelease];
 		self.addressString=@"harbor-mbp.local:7342";
 		[self addObserver:self forKeyPath:@"nButtonState" options:NSKeyValueObservingOptionNew context:&DirectionChangedContext];
 		[self addObserver:self forKeyPath:@"sButtonState" options:NSKeyValueObservingOptionNew context:&DirectionChangedContext];
 		[self addObserver:self forKeyPath:@"eButtonState" options:NSKeyValueObservingOptionNew context:&DirectionChangedContext];
 		[self addObserver:self forKeyPath:@"wButtonState" options:NSKeyValueObservingOptionNew context:&DirectionChangedContext];
+		[self addObserver:self forKeyPath:@"d710point" options:NSKeyValueObservingOptionNew context:&PointChangedContext];
+		[self addObserver:self forKeyPath:@"targetPoint" options:NSKeyValueObservingOptionNew context:&PointChangedContext];
 	}
 	return self;
 }
@@ -98,6 +108,18 @@ static void* DirectionChangedContext=(void *)@"TelescopeControllerDirectionChang
 		}
 		
 		[self doSend:[NSString stringWithFormat:@"%@%c",strOfState,dir]];
+	}else if(context==&PointChangedContext&&self.targetPoint&&self.d710point){
+		NSLog(@"problem is here");
+		[self.d710point findTarget:self.targetPoint];
+		double distto, angto, heading;
+		distto=self.d710point.distanceBetweenSelfAndTarget;
+		angto=self.d710point.angleFromLevelToTarget*180/M_PI;
+		heading=self.d710point.headingFromSelfToTarget*180/M_PI;
+		if (!isnan(distto)&&!isnan(angto)&&!isnan(heading)) {
+			self.targetAltitude=[NSString stringWithFormat:@"%f", angto];
+			self.targetAzimuth=[NSString stringWithFormat:@"%f", heading];
+			[self setAltAzAndGo:nil];
+		}
 	}
 }
 
@@ -115,8 +137,8 @@ static void* DirectionChangedContext=(void *)@"TelescopeControllerDirectionChang
 	[self doState:NSOffState on:directions];
 }
 -(void)doSend:(NSString *)command{
-	[self.con send:[[NSString stringWithFormat:@"#:%@#",command] dataUsingEncoding:NSASCIIStringEncoding]];
-	NSLog(@"sending #:%@# con: %d",command,self.con.connected);
+	[self.con writeData:[[NSString stringWithFormat:@"#:%@#",command] dataUsingEncoding:NSASCIIStringEncoding] withTimeout:-1 tag:2463];
+	NSLog(@"I am now sending command: %@",command);
 }
 
 -(void)doState:(int)state on:(NSString*)directions{
@@ -160,7 +182,12 @@ static void* DirectionChangedContext=(void *)@"TelescopeControllerDirectionChang
 	NSArray *parts=[self.addressString componentsSeparatedByString:@":"];
 	if (parts.count==2) {
 		NSLog(@"connecting to %@ on %d",[parts objectAtIndex:0], [[parts objectAtIndex:1] intValue]);
-		[self.con connectToServer:[parts objectAtIndex:0] onPort:[[parts objectAtIndex:1] intValue]];	
+		NSError *err=nil;
+		[self.con connectToHost:[parts objectAtIndex:0] onPort:[[parts objectAtIndex:1] intValue] error:&err];	
+		if(err){
+			NSLog(@"Error connecting to telescope socket: %@",err.userInfo);
+			return;
+		}
 		[self.window makeKeyAndOrderFront:nil];
 		[self.connectionWindow close];
 	}
@@ -184,19 +211,6 @@ SphericalPoint *pointForPacket(id packet){
 
 -(void)receivedPacketFromCallsign:(NSString *)callsign withBody:(NSDictionary *)dict{
 	NSLog(@"got from %@ packet: %@",callsign,dict);
-	SphericalPoint *targetPoint=pointForPacket(dict);
-	if (targetPoint) {
-		[self.d710point findTarget:targetPoint];
-		double distto, angto, heading;
-		distto=self.d710point.distanceBetweenSelfAndTarget;
-		angto=self.d710point.angleFromLevelToTarget*180/M_PI;
-		heading=self.d710point.headingFromSelfToTarget*180/M_PI;
-		if (!isnan(distto)&&!isnan(angto)&&!isnan(heading)) {
-			self.targetAltitude=[NSString stringWithFormat:@"%f", angto];
-			self.targetAzimuth=[NSString stringWithFormat:@"%f", heading];
-			[self setAltAzAndGo:nil];
-		}
-	}
-	
+	self.targetPoint=pointForPacket(dict);	
 }
 @end

@@ -7,13 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <TCP/TCP.h>
+
+#import "AsyncSocket.h"
 
 @class Telescope;
 
-@interface TNC_ControllerAppDelegate : NSObject <NSApplicationDelegate, TCPListener> {
+@interface TNC_ControllerAppDelegate : NSObject <NSApplicationDelegate, AsyncSocketDelegate> {
 	NSWindow *window;
-	TCP *tcp;
+	AsyncSocket *socket;
 	NSString *_address,*_callsigns;
 	NSMutableArray *_telescopes;
 }

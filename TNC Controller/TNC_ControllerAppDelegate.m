@@ -24,11 +24,12 @@
 	self.address=@"localhost:54730";
 	self.callsigns=@"KE7ROS";
 	self.telescopes=[NSMutableArray arrayWithCapacity:1];
-	tcp=[[TCP alloc]init];
-	tcp.delegate=self;
+	socket=[[AsyncSocket alloc] initWithDelegate:self];
 }
--(void)receivedMessage:(NSData *)message socket:(CFSocketRef)socket{
-	NSDictionary * dict=[message objectFromJSONData];
+-(void)onSocket:(AsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag{
+	NSLog(@"got msg: %s", data.bytes);
+	[socket readDataToData:[AsyncSocket CRLFData] withTimeout:-1 tag:986];
+	NSDictionary * dict=[data   objectFromJSONData];
 	NSArray *calls=[self.callsigns componentsSeparatedByString:@","];
 	[dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
 		if ([key isEqualToString:@"D710"])
@@ -66,8 +67,14 @@
 -(IBAction)connectToServer:(id)sender{
 	NSArray *parts=[self.address componentsSeparatedByString:@":"];
 	if (parts.count==2) {
+		NSError *err=nil;
+		[socket connectToHost:[parts objectAtIndex:0] onPort:((NSString *)[parts objectAtIndex:1]).intValue error:&err];
+		if(err){
+			NSLog(@"Error connecting to socket: %@",err.userInfo);
+			return;
+		}
 		[[sender window] performClose:sender];
-		[tcp connectToServer:[parts objectAtIndex:0] onPort:[[parts objectAtIndex:1] intValue]];	
+		[socket readDataToData:[AsyncSocket CRLFData] withTimeout:-1 tag:986];
 		[self.window makeKeyAndOrderFront:nil];
 	}
 }

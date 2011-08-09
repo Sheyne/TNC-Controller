@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36194D8313F0A312003D8B1E /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 36194D8213F0A312003D8B1E /* AsyncSocket.m */; };
 		3648C74813EA176800797C3F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3648C74713EA176800797C3F /* Cocoa.framework */; };
 		3648C75213EA176800797C3F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3648C75013EA176800797C3F /* InfoPlist.strings */; };
 		3648C75413EA176800797C3F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3648C75313EA176800797C3F /* main.m */; };
@@ -23,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36194D8113F0A312003D8B1E /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		36194D8213F0A312003D8B1E /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		36194D8713F0A8F1003D8B1E /* TNC Listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TNC Listener.h"; sourceTree = "<group>"; };
 		3648C74313EA176800797C3F /* TNC Controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TNC Controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3648C74713EA176800797C3F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3648C74A13EA176800797C3F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -41,7 +45,6 @@
 		3648C76813EA17F200797C3F /* TelescopeDriver.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelescopeDriver.xib; sourceTree = "<group>"; };
 		3648C76A13EA209F00797C3F /* TCP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TCP.framework; path = Library/Frameworks/TCP.framework; sourceTree = SDKROOT; };
 		3648C76C13EA21F500797C3F /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		366486F513EEE62900421348 /* TNC Listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TNC Listener.h"; sourceTree = "<group>"; };
 		36F931F013EC65D800C7FBC3 /* GeoMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoMath.h; sourceTree = "<group>"; };
 		36F931F113EC65D800C7FBC3 /* GeoMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoMath.m; sourceTree = "<group>"; };
 		36F931F213EC65D800C7FBC3 /* SphericalPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SphericalPoint.h; sourceTree = "<group>"; };
@@ -63,6 +66,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36194D7F13F0A300003D8B1E /* asyncsocket */ = {
+			isa = PBXGroup;
+			children = (
+				36194D8113F0A312003D8B1E /* AsyncSocket.h */,
+				36194D8213F0A312003D8B1E /* AsyncSocket.m */,
+			);
+			name = asyncsocket;
+			sourceTree = "<group>";
+		};
 		3648C73813EA176700797C3F = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +116,8 @@
 		3648C74D13EA176800797C3F /* TNC Controller */ = {
 			isa = PBXGroup;
 			children = (
+				36194D8713F0A8F1003D8B1E /* TNC Listener.h */,
+				36194D7F13F0A300003D8B1E /* asyncsocket */,
 				36F931F613EC673700C7FBC3 /* JSON */,
 				36F931EE13EC658E00C7FBC3 /* Math */,
 				3648C76413EA17B000797C3F /* TelescopeController */,
@@ -111,7 +125,6 @@
 				3648C75A13EA176800797C3F /* TNC_ControllerAppDelegate.m */,
 				3648C75C13EA176800797C3F /* MainMenu.xib */,
 				3648C74E13EA176800797C3F /* Supporting Files */,
-				366486F513EEE62900421348 /* TNC Listener.h */,
 			);
 			path = "TNC Controller";
 			sourceTree = "<group>";
@@ -229,6 +242,7 @@
 				36F931F413EC65D800C7FBC3 /* GeoMath.m in Sources */,
 				36F931F513EC65D800C7FBC3 /* SphericalPoint.m in Sources */,
 				36F931FC13EC679C00C7FBC3 /* JSONKit.m in Sources */,
+				36194D8313F0A312003D8B1E /* AsyncSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
